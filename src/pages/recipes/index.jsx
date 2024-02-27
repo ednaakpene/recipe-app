@@ -50,7 +50,7 @@ export default function Recipes() {
         }
       />
 
-      <Grid sx={{ mt: "1rem" }} container spacing={3}>
+      <Grid sx={{ mt: "1rem", justifyContent: "center" }} container spacing={3}>
         {recipes.length > 0 ? (
           recipes.map((recipe) => (
             <Grid key={recipe.id} item xs={4}>
