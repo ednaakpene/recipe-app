@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import useSWR from "swr";
 import loadingIcon from "../../assets/images/bouncing-circles.svg";
 import { Container } from "@mui/material";
+
 const getRecipe = (...args) => {
   //prepare url
   const url = new URL(args[0]);
