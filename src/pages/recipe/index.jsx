@@ -1,7 +1,8 @@
-import { useParams } from "react-router-dom";
+import {  useParams } from "react-router-dom";
 import useSWR from "swr";
 import loadingIcon from "../../assets/images/bouncing-circles.svg";
 import { Container } from "@mui/material";
+import Navbar from "../../components/navbar";
 
 const getRecipe = (...args) => {
   //prepare url
@@ -15,12 +16,13 @@ const getRecipe = (...args) => {
 export default function Recipe() {
   const { id } = useParams();
   const { data, isLoading } = useSWR(
-    `https://api.spoonacular.com/recipes/${id}/information`,
+    `${process.env.REACT_APP_RECIPE_API_BASE_URL}/recipes/${id}`,
     getRecipe
   );
   // console.log(data, isLoading);
   return (
     <>
+    <Navbar/>
       {isLoading ? (
         <img src={loadingIcon} alt="loading icon" />
       ) : (

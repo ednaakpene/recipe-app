@@ -1,5 +1,4 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Navbar from "./components/navbar";
 import Recipe from "./pages/recipe";
 import Recipes from "./pages/recipes";
 import AddRecipe from "./pages/add-recipe";
@@ -13,10 +12,7 @@ const myrouter = createBrowserRouter([
 
 function App() {
   return (
-    <>
-    <Navbar />   
    <RouterProvider router={myrouter} />
-    </>
   );
 }
 
