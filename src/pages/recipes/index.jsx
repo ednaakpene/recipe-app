@@ -73,7 +73,7 @@ export default function Recipes() {
                   <CardMedia
                     component="img"
                     height="140"
-                    image={recipe.image}
+                    image={`${process.env.REACT_APP_RECIPE_API_BASE_URL}/images/${recipe.image}`}
                     alt={recipe.title}
                   />
                   <CardContent sx={{ height: "100%" }}>
