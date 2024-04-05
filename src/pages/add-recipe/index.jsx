@@ -128,6 +128,7 @@ export default function AddRecipe() {
               type="submit"
               size="large"
               variant="contained"
+              color="success"
             >
               Add New Recipe
             </LoadingButton>
